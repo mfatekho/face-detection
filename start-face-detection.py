@@ -14,7 +14,7 @@ def build_argparser():
                       required=True, type=str)
     args.add_argument('-f', '--framework',
                       help='Required. Specify a framework that will be used for inference. opencv,'
-                           ' mtcnn (tf implementation) or openvino is acceptable. ', required=True, type=str)
+                           ' mtcnn (tf implementation), tf or openvino is acceptable. ', required=True, type=str)
     return parser
 
 
