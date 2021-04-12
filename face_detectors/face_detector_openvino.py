@@ -6,8 +6,10 @@ import cv2
 
 class OpenVINOFaceDetector(FaceDetector):
     def __init__(self):
-        model_xml = './model/face-detection-adas-0001.xml'
-        model_bin = './model/face-detection-adas-0001.bin'
+        model_xml = './model/ssdlite_mobilenet_v2.xml'
+        model_bin = './model/ssdlite_mobilenet_v2.bin'
+        # model_xml = './model/face-detection-adas-0001.xml'
+        # model_bin = './model/face-detection-adas-0001.bin'
         self.plugin = IECore()
         self.open_vino_threshold = 0.8
         self.net = self.plugin.read_network(model=model_xml, weights=model_bin)
